@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                pwsh(script: 'docker images -a')
+                pwsh(script: 'Write-Output "hello wolrddd"')
             }
         }
     }
