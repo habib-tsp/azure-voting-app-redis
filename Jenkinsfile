@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            powershell 'docker images -a'
+            powershell 'docker --version'
                 }
       }
       
