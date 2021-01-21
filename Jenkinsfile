@@ -23,7 +23,7 @@ pipeline {
    stage('Start test app') {
          steps {
            powershell '''docker-compose up -d
-                     & "./scripts/test_container.ps1"'''
+                     & "scripts/test_container.ps1"'''
             
          }
          post {
@@ -37,7 +37,7 @@ pipeline {
       }
       stage('Run Tests') {
          steps {
-            powershell 'pytest ./tests/test_sample.py'
+            powershell 'pytest tests/test_sample.py'
          }
       }
       stage('Stop test app') {
